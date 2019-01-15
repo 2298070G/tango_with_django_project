@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>About Rango</title>
+    </head>
+
+    <body>
+        <h3>This tutorial has been put together by Luke Gall (2298070G)</h1>
+        
+        <div>
+            <strong>Here is a picture of a cat</strong> <br/>
+            <img src="{{ MEDIA_URL}}cat.jpg" alt="Star wars cat"/>
+        </div>
+
+        <div>
+            <a href='/rango/'> Index </a><br/>
+            <img src="{%static "images/fish.jpg" %}" alt="Picture of Rango's fish" />
+        </div>
+    </body>
+</html>
