@@ -24,11 +24,11 @@ def index(request):
 
 
 def about(request):
-    # A context dictionary for the about page
-    context_dict = {'cat': "star wars, cute, small"}
-
-    # Use the render function to generate rendered response
-    return render(request, 'rango/about.html', context=context_dict)
+    # prints out whether the metohd is a GET or a POST
+    print(request.method)
+    # prints out the user name, if no one is logged in it prints 'AnonymousUser'
+    print(request.user)
+    return render(request, 'rango/about.html',{})
 
 def show_category(request, category_name_slug):
     # Create a context dictionary which we can pass
