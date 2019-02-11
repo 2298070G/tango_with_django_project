@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rango',
+    'registration',
+    'bootstrap_toolkit',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
-
+TEMPLATE_STRING_IF_INVALID = ''
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -130,5 +132,12 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
-# Redirect 
-LOGIN_URL = '/rango/login/'
+# Redirect
+
+# Registration files
+
+REGISTRATION_OPEN = True
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = '/rango/'
+LOGIN_URL = '/accounts/login/'
